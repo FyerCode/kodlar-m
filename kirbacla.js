@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
 
-exports.run = function(client, message) {
+exports.run = function(client, message, args) {
 
     if(!message.member.hasPermission('SEND_MESSAGES')) return message.channel.send(`Yetkin yok.`)
     if(!args[0]) return message.channel.send(`**${ayarlar.prefix}kirbaçla sert/yumuşak/anime/vahşi-batı**`)
